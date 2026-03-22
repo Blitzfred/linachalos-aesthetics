@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lina Chalos - Full Body Aesthetics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="relative flex items-center px-8 py-6">
+
+            <!-- Logo / Name -->
+            <div class="text-white font-luxury text-xl">
+                <a href="index.html">Lina Chalos</a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden absolute left-1/2 -translate-x-1/2 md:flex gap-10 text-white font-body">
+                <li><a href="leistungen.html"
+                        class="font-luxery schrift-navigation schrift-navigation:hover">Leistungen</a>
+                </li>
+                <li><a href="#about" class="font-luxery schrift-navigation schrift-navigation:hover">Über
+                        uns</a></li>
+                <li><a href="#about" class="font-luxery schrift-navigation schrift-navigation:hover">Test</a>
+                </li>
+                <li><a href="#about" class="font-luxery schrift-navigation schrift-navigation:hover">Impressum</a>
+                </li>
+            </ul>
+
+            <!-- Burger Symbol 
+            <button id="menu-btn" class="md:hidden text-white text-2xl ml-auto">
+                ☰
+            </button> -->
+
+            <!-- Instagram + Burger -->
+            <div class="ml-auto flex items-center gap-6">
+
+                <!-- Instagram -->
+                <a class="instagram-logo" href="https://www.instagram.com/lc_aesthetik/" target="_blank"
+                    class="text-white text-2xl transition duration-300 hover:text-pink-400 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(236,72,153,0.9)]">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/+491637782037" target="_blank" class="whatsapp-logo whatsapp-logo:hover">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <!-- Burger -->
+                <button id="menu-btn"
+                    class="md:hidden text-white transition duration-300 font-luxery schrift-navigation">
+                    ☰
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu"
+            class="hidden absolute right-0 z-10 top-full w-64 shadow-lg duration-1000 text-white text-center space-y-1">
+            <li class="border-white border-t-2 py-1 font-luxery schrift-navigation schrift-navigation:hover">
+                <a href="leistungen.html">Leistungen</a>
+            </li>
+            <li class="border-white border-t-2 py-1 font-luxery schrift-navigation schrift-navigation:hover">
+                <a href="#about">Über uns</a>
+            </li>
+            <li class="border-white border-t-2 py-1 pb-2 font-luxery schrift-navigation schrift-navigation:hover">
+                <a href="#about">Impressum</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Preise -->
+    <section class="py-20 hintergrund-beige">
+
+        <h1>
+            Preisliste
+        </h1>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="p-6 shadow-2xl hintergrund-beige rounded-2xl">
+                <h2 class="text-xl font-bold mb-4">💉 Hyaluron-Behandlungen</h2>
+                <p class="mb-4"> Ich arbeite ausschließlich mit hochwertiger Hyaluronsäure der Firma Teoxane. Teoxane
+                    zählt zu den führenden Herstellern auf dem ästhetischen Markt und steht für besonders natürliche,
+                    harmonische und langanhaltende Ergebnisse. </p>
+                <p class="mb-4"> ✨ Ziel meiner Behandlungen ist es, Ihre natürliche Schönheit zu unterstreichen – ohne
+                    künstlichen Effekt. </p> <!-- Lippen -->
+                <p class="font-semibold mt-6 mb-2">👄 Lippenbehandlung</p>
+                <div class="divide-y">
+                    <div class="flex justify-between py-2"> <span>0,5 ml</span> <span>189 €</span> </div>
+                    <div class="flex justify-between py-2"> <span>0,8 ml</span> <span>250 €</span> </div>
+                    <div class="flex justify-between py-2"> <span>1,0 ml</span> <span>330 €</span> </div>
+                </div> <!-- Augenringe -->
+                <p class="font-semibold mt-6 mb-2">👁 Augenringe</p>
+                <p class="mb-4"> ab 339 € <br> <span class="text-sm opacity-80"> (Der genaue Preis richtet sich nach dem
+                        individuellen Befund und dem benötigten Material.) </span> </p> <!-- Beratung -->
+                <p class="font-semibold mt-6 mb-2">💬 Beratung</p>
+                <p class="mb-4"> Vor jeder Behandlung biete ich ein unverbindliches Beratungsgespräch an. </p>
+                <p> Gemeinsam besprechen wir Ihre Wünsche, Erwartungen und finden die beste individuelle Lösung für ein
+                    ästhetisches und natürliches Ergebnis. </p>
+            </div>
+        </div>
+    </section>
+
+    <!--Leistungen-->
+    <section>
+        <div class="cards-container">
+            <div class="card">
+                <img src="images/behandlung1.png" alt="Lippenbehandlung 1">
+                <p class="overlaytext-lippenbehandlung">
+                    <b>Lippenbehandlung:</b><br> 0,5 ml - 189 €<br> 0,8 ml - 250 €<br> 1,0 ml - 330 €
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="images/behandlung2.png" alt="Lippenbehandlung 2">
+                <p class="overlaytext-lippenbehandlung">
+                    <b>Augenringe:</b><br>Ab 339 €<br>
+                    (Der genaue Preis richtet sich nach dem individuellen Befund und dem benötigten Material.)
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="images/behandlung3.png" alt="Lippenbehandlung 3">
+                <p class="overlaytext-lippenbehandlung">
+                    <b>Beratung:<b><br>Vor jeder Behandlung biete ich ein unverbindliches Beratungsgespräch an.<br><br>
+
+                            Gemeinsam besprechen wir Ihre Wünsche, Erwartungen und finden die beste individuelle Lösung
+                            für ein ästhetisches und natürliches Ergebnis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <footer class="py-6 bg-gray-300">
+
+        <div class="max-w-4xl mx-auto text-center">
+
+            <h2 class="text-3xl font-bold mb-6">
+                Kontakt
+            </h2>
+
+            <p class="mb-4">
+                Lina Chalos - Aesthetics
+            </p>
+
+            <p class="mb-4">
+                Göbelstraße 25, Mayen 56727
+            </p>
+
+            <p>
+                Terminvereinbarung:
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/lc_aesthetik/" target="_blank"
+                    class="instagram-logo instagram-logo:hover px-1">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/+491637782037" target="_blank" class="whatsapp-logo whatsapp-logo:hover">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </p>
+            <p>Beauty, Kosmetik und Körperpflege
+            <ul>
+                <li>▫️Full Body Aesthetics</li>
+                <li>▫️Liposana | Unterspritzungen</li>
+                <li>▫️Individuelle Beratung</li>
+                <li>▫️Termine via DM | WhatsApp</li>
+                <li>▫️Di–Fr | nach Termin</li>
+                <li>▫️Sa nach Vereinbarung</li>
+            </ul>
+            </p>
+        </div>
+
+    </footer>
+    <script>
+        imageSlides();
+        // initNavbar();
+        showBurgerMenu()
+    </script>
+</body>
+
+</html>

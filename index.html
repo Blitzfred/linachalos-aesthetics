@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lina Chalos - Full Body Aesthetics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="relative flex items-center px-8 py-6">
+
+            <!-- Logo / Name -->
+            <div class="text-white font-luxury text-xl">
+                <a href="index.html">Lina Chalos</a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden absolute left-1/2 -translate-x-1/2 md:flex gap-10 text-white">
+                <li><a href="leistungen.html"
+                        class="font-luxery schrift-navigation">Leistungen</a>
+                </li>
+                <li><a href="#about"
+                        class="font-luxery schrift-navigation">Über
+                        uns</a></li>
+                <li><a href="#about"
+                        class="font-luxery schrift-navigation">Test</a>
+                </li>
+                <li><a href="#about"
+                        class="font-luxery schrift-navigation">Impressum</a>
+                </li>
+            </ul>
+
+            <!-- Instagram + Burger -->
+            <div class="ml-auto flex items-center gap-6">
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/lc_aesthetik/" target="_blank"
+                    class="instagram-logo instagram-logo:hover">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/+491637782037" target="_blank"
+                    class="whatsapp-logo whatsapp-logo:hover">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <!-- Burger -->
+                <button id="menu-btn"
+                    class="md:hidden text-white transition duration-300 font-luxery schrift-navigation schrift-navigation:hover">
+                    ☰
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu"
+            class="hidden absolute right-0 z-10 top-full w-64 shadow-lg duration-1000 text-white text-center space-y-1">
+            <li
+                class="border-white border-t-2 py-1 font-luxery schrift-navigation schrift-navigation:hover">
+                <a href="leistungen.html">Leistungen</a>
+            </li>
+            <li
+                class="border-white border-t-2 py-1 font-luxery schrift-navigation schrift-navigation:hover">
+                <a href="#about">Über uns</a>
+            </li>
+            <li
+                class="border-white border-t-2 py-1 pb-2 font-luxery schrift-navigation schrift-navigation:hover">
+                <a href="#about">Impressum</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative h-screen">
+
+        <!-- Slides -->
+        <div class="absolute bg-auto inset-0 w-full h-full transition-opacity duration-[1800ms] opacity-100 slide"
+            style="background-image: url('images/studio1.png');"></div>
+        <div class="absolute bg-auto inset-0 w-full h-full transition-opacity duration-[1800ms] opacity-0 slide"
+            style="background-image: url('images/behandlung2.png');"></div>
+        <div class="absolute bg-auto inset-0 w-full h-full transition-opacity duration-[1800ms] opacity-0 slide"
+            style="background-image: url('images/lina1.png');"></div>
+
+    </section>
+
+    <!-- SERVICES -->
+    <section class="py-16 hintergrund-beige">
+        <h1>
+            Leistungen
+        </h1>
+        <div class="max-w-6xl mx-auto px-4 space-y-12">
+            <!-- CARD 1: Bild links, Text rechts -->
+            <div class="grid items-center gap-8 md:grid-cols-2">
+                <div>
+                    <img src="images/behandlung3.png" alt="Gesichtsbehandlung"
+                        class="w-full h-64 object-cover rounded-lg">
+                </div>
+
+                <div>
+                    <h2>Gesichtsbehandlung</h2>
+                    <p>
+                        Ich arbeite ausschließlich mit hochwertiger Hyaluronsäure der Firma Teoxane.
+                        Teoxane zählt zu den führenden Herstellern auf dem ästhetischen Markt und steht für besonders
+                        natürliche, harmonische und langanhaltende Ergebnisse.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CARD 2: Text links, Bild rechts -->
+            <div class="grid items-center gap-8 md:grid-cols-2">
+                <div class="md:order-1">
+                    <h2>Fettreduktion & Stoffwechsel-Boost</h2>
+                    <p>
+                        Durch Ultraschall‑Frequenzen werden Fettzellen erwärmt und durchlässiger gemacht – das unterstützt die Freisetzung von gespeicherten Substanzen und regen den Stoffwechsel an. Dadurch lässt sich das Erscheinungsbild von hartnäckigen Fettdepots und Cellulite verbessern, ganz ohne Operation.
+                    </p>
+                </div>
+
+                <div class="md:order-2">
+                    <img src="images/behandlung2.png" alt="Wimpernverlängerung"
+                        class="w-full h-64 object-cover rounded-lg">
+                </div>
+            </div>
+
+            <!-- CARD 1: Bild links, Text rechts -->
+            <div class="grid items-center gap-8 md:grid-cols-2">
+                <div>
+                    <img src="images/behandlung4.png" alt="Gesichtsbehandlung"
+                        class="w-full h-64 object-cover rounded-lg">
+                </div>
+
+                <div>
+                    <h2>Gesichtsbehandlung</h2>
+                    <p>
+                        Ich arbeite ausschließlich mit hochwertiger Hyaluronsäure der Firma Teoxane.
+                        Teoxane zählt zu den führenden Herstellern auf dem ästhetischen Markt und steht für besonders
+                        natürliche, harmonische und langanhaltende Ergebnisse.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <footer class="py-6 bg-gray-300">
+
+        <div class="max-w-4xl mx-auto text-center">
+
+            <h2 class="text-3xl font-bold mb-6">
+                Kontakt
+            </h2>
+
+            <p class="mb-4">
+                Lina Chalos - Aesthetics
+            </p>
+
+            <p class="mb-4">
+                Göbelstraße 25, Mayen 56727
+            </p>
+
+            <p>
+                Terminvereinbarung:
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/lc_aesthetik/" target="_blank"
+                    class="instagram-logo instagram-logo:hover px-1">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/+491637782037" target="_blank"
+                    class="whatsapp-logo whatsapp-logo:hover">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </p>
+            <p>Beauty, Kosmetik und Körperpflege
+                <ul>
+                    <li>▫️Full Body Aesthetics</li>
+                    <li>▫️Liposana | Unterspritzungen</li>
+                    <li>▫️Individuelle Beratung</li>
+                    <li>▫️Termine via DM | WhatsApp</li>
+                    <li>▫️Di–Fr | nach Termin</li>
+                    <li>▫️Sa nach Vereinbarung</li>
+                </ul>
+            </p>
+        </div>
+
+    </footer>
+
+
+    <script>
+        imageSlides();
+       // initNavbar();
+        showBurgerMenu()
+    </script>
+
+</body>
+
+</html>
