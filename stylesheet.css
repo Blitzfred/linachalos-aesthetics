@@ -133,12 +133,23 @@ p {
 .cards-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "card card card";
   justify-content: center;
   place-items: center;
   max-width: 1500px;
   gap: 2px;
   margin: 0 auto;
+}
+
+@media (max-width: 678px) {
+  .cards-container {
+     grid-template-columns: 1fr;
+  grid-template-areas: 
+  "card";
+  }
 }
 
 /* Eine Karte ist ein kleines Grid mit 1 Zelle,
