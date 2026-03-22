@@ -164,12 +164,6 @@ p {
   /*place-items: end;*/
 }
 
-@media (max-width: 678px) {
-  .card {
-    max-width: 100px;
-  }
-}
-
 /* Bild */
 .card img {
   width: 100%;
