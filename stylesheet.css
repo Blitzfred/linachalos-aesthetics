@@ -95,9 +95,9 @@ nav {
 }
 
 .logo img {
-    height: 75px;
-    width: auto;
-    display: block;
+  height: 75px;
+  width: auto;
+  display: block;
 }
 
 h1 {
@@ -165,13 +165,22 @@ p {
   box-shadow: 0 10px 30px rgba(117, 81, 55, 0.2);
 }
 
-.price-list {
-  border-top: 1px solid #ddd;
+.behandlungen {
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.price-list-lippenbehandlung {
+  border-top: 1px solid #eee;
 }
 
 /* Einzelne Zeile */
 .price-row {
   display: flex;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.275rem !important;
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
