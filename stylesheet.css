@@ -151,7 +151,6 @@ p {
   "card";
    gap: 2px;
    margin: 0 auto;
-   max-width: 200px;
   }
 }
 
@@ -163,6 +162,12 @@ p {
   display: grid;
   overflow: hidden;
   /*place-items: end;*/
+}
+
+@media (max-width: 678px) {
+  .card {
+    max-width: 500px;
+  }
 }
 
 /* Bild */
