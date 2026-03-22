@@ -149,6 +149,9 @@ p {
      grid-template-columns: 1fr;
   grid-template-areas: 
   "card";
+   gap: 2px;
+   margin: 0 auto;
+   max-width: 600px;
   }
 }
 
