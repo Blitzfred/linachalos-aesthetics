@@ -110,15 +110,16 @@ h1 {
 
 h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 1.875rem !important;
   margin-bottom: 0.75rem;
 }
 
 h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 1.475rem !important;
+  text-decoration: underline;
   margin-bottom: 0.75rem;
 }
 
@@ -130,6 +131,9 @@ p {
   line-height: 1.5;
 }
 
+/* TODO: OVerlay bereich verändert sich und verzerrt das bild weil die schrift sich ncith anpasst. 
+1. ein max relative height ermitteln
+2. Schrift größe relative vergrößern*/ 
 .cards-container {
   width: 100%;
   display: grid;
@@ -146,8 +150,8 @@ p {
 
 @media (max-width: 678px) {
   .cards-container {
-     grid-template-columns: 1fr;
-  grid-template-areas: 
+    grid-template-columns: 1fr;
+    grid-template-areas: 
   "card";
    gap: 2px;
    margin: 0 auto;
@@ -158,16 +162,15 @@ p {
    Bild und Text liegen beide in derselben Zelle (1/1) übereinander */
 .card {
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
   display: grid;
-  overflow: hidden;
-  /*place-items: end;*/
+  place-items: end;
 }
 
 /* Bild */
 .card img {
   width: 100%;
-  height: 100%;
+ height: 100%;
   object-fit: cover;
   grid-area: 1 / 1;
 }
@@ -180,9 +183,29 @@ p {
 
 .behandlungen {
   font-weight: bold;
+  color: white;
   font-family: 'Cormorant Garamond', serif;
   margin-top: 24px;
   margin-bottom: 8px;
+}
+
+/* Overlay-Text bündig über dem Bild */
+.overlaytext-behandlung {
+  grid-area: 1 / 1;
+  width: 100%;
+  /*height: 100%;*/
+  /* Füllt die ganze Karte aus
+  display: flex;
+  /* Text besser ausrichten 
+  flex-direction: column;*/
+  justify-content: center;
+  /* Text vertikal zentrieren */
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 1.5rem;
+  margin: 0 auto;
+  
+  /* Padding wird nicht zur Breite addiert */
 }
 
 .price-list-lippenbehandlung {
@@ -199,20 +222,3 @@ p {
   border-bottom: 1px solid #eee;
 }
 
-/* Overlay-Text bündig über dem Bild */
-.overlaytext-lippenbehandlung {
-  grid-area: 1 / 1;
-  width: 100%;
-  height: 100%;
-  /* Füllt die ganze Karte aus */
-  display: flex;
-  /* Text besser ausrichten */
-  flex-direction: column;
-  justify-content: center;
-  /* Text vertikal zentrieren */
-  background-color: rgba(0, 0, 0, 0.65);
-  color: white;
-  padding: 1.5rem;
-  box-sizing: border-box;
-  /* Padding wird nicht zur Breite addiert */
-}
