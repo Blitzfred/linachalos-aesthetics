@@ -146,7 +146,7 @@ p {
 
 @media (max-width: 678px) {
   .cards-container {
-     grid-template-columns: 1fr;
+     grid-template-columns: 600px;
   grid-template-areas: 
   "card";
   }
