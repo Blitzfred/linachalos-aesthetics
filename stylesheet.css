@@ -194,11 +194,11 @@ span {
   grid-area: 1 / 1;
 }
 
-/* 🔥 Hover Effekt */
+/* 🔥 Hover Effekt 
 .card:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 10px 30px rgba(117, 81, 55, 0.2);
-}
+}*/
 
 .behandlungen {
   font-weight: bold;
