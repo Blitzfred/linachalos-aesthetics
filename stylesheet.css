@@ -182,7 +182,7 @@ span {
     padding-left: 1.5rem;   /* 24px */
     padding-right: 1.5rem;  /* 24px */
     /*padding: 2rem;  32px statt 24px */
-    max-width: calc(766px * 0.7);
+    max-width: calc(766px * 0.6);
     /* sm:rounded-3xl (Falls die Ecken auf großen Screens runder sein sollen) */
     border-radius: 1.5rem; /* 24px */
     
@@ -212,7 +212,7 @@ span {
     grid-template-columns: 1fr;
     grid-template-areas: 
   "card";
-   max-width: calc(766px * 0.7);
+   max-width: calc(766px * 0.6);
     /* Damit es auf dem Handy nicht zu breit wird, begrenzen wir es zusätzlich 
     width: min(90%, 600px); */
     
