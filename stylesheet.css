@@ -105,7 +105,7 @@ h1 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: bold;
   font-size: clamp(2rem, 1.28rem + 3.08vw, 3.5rem)!important;
-  line-height: 1.1;
+  line-height: 1;
   font-weight: 800;
   color: white;
   margin-bottom: 1.5rem;
@@ -117,7 +117,7 @@ h2 {
   font-weight: bolder;
   color: white;
   font-size: clamp(1.625rem, 1.29rem + 1.44vw, 2.5rem)!important;
-  line-height: 1.2;
+  line-height: 1.1;
   margin-bottom: 0.75rem;
 }
 
@@ -125,7 +125,7 @@ h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: bolder;
   font-size: clamp(1.25rem, 1.08rem + 0.72vw, 1.75rem)!important;
-  line-height: 1.3;
+  line-height: 1.2;
   color: white;
   text-decoration: underline;
   margin-bottom: 0.75rem;
@@ -137,7 +137,7 @@ p {
   color: white;
   margin-bottom: 0.5rem;
   font-size: clamp(1rem, 0.94rem + 0.26vw, 1.1875rem);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 span {
@@ -146,7 +146,7 @@ span {
   color: white;
   margin-bottom: 0.5rem;
   font-size: clamp(1rem, 0.94rem + 0.26vw, 1.1875rem);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 
