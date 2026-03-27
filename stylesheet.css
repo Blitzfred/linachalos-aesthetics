@@ -177,12 +177,12 @@ span {
 }
 
 /* sm:px-6 (Ab 640px Bildschirmbreite wird das seitliche Padding erhöht) */
-@media (min-width: 640px) {
+@media (max-width: 766px) {
   .bereich {
     padding-left: 1.5rem;   /* 24px */
     padding-right: 1.5rem;  /* 24px */
     /*padding: 2rem;  32px statt 24px */
-    max-width: 600px;
+    max-width: calc(766px * 0.7);
     /* sm:rounded-3xl (Falls die Ecken auf großen Screens runder sein sollen) */
     border-radius: 1.5rem; /* 24px */
     
@@ -197,7 +197,6 @@ span {
 .cards-container {
   width: 100%;
   display: grid;
-  /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
   "card card card";
@@ -208,12 +207,12 @@ span {
   margin: 0 auto;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 766px) {
   .cards-container {
     grid-template-columns: 1fr;
     grid-template-areas: 
   "card";
-   max-width: 600px;
+   max-width: calc(766px * 0.7);
     /* Damit es auf dem Handy nicht zu breit wird, begrenzen wir es zusätzlich 
     width: min(90%, 600px); */
     
