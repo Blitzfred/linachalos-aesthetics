@@ -28,6 +28,94 @@ body {
     0 0 20px rgba(117, 81, 55, 1);
 }
 
+.nav-menu {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex;
+    gap: 2.5rem;
+    /* 10 * 0.25rem = 40px */
+  }
+}
+
+.side-menu {
+  margin-left: auto;
+  /* ml-auto */
+  display: flex;
+  /* flex */
+  align-items: center;
+  /* items-center */
+  gap: 1.5rem;
+}
+
+.menu-btn-style {
+  color: white;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+ /* md:hidden (Ab 768px ausblenden) */
+@media (min-width: 768px) {
+  .menu-btn-style  {
+    display: none;
+  }
+}
+
+.mobile-menu-style {
+  /* Positionierung bleibt gleich */
+  position: absolute;
+  right: 0;
+  top: 100%; /* "100%" bedeutet: Starte exakt da, wo die Navbar aufhört */
+  z-index: 10;
+  width: 16rem;
+  
+  /* Optik bleibt gleich */
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background-color: #451a03cc; /* Beispiel-Hintergrund, damit man was sieht */
+
+  /* --- DAS IST NEU FÜR DIE ANIMATION --- */
+  opacity: 0;                /* Komplett durchsichtig */
+  visibility: hidden;        /* Klicks gehen durch das Element hindurch */
+  transform: translateY(-10px); /* Optional: Kleiner Slide-Effekt von oben */
+  transition: all 800ms ease; /* Aktiviert die 1-Sekunden-Animation */
+}
+
+/* Ab 768px Breite wird das Menü強制 (forcé) ausgeblendet */
+@media (min-width: 768px) {
+  .mobile-menu-style {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/*Neue Klasse für MEnü punkt ausfahren*/
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.letzer-mobile-menu {
+  border-color: white;      /* border-white */
+  border-top-width: 2px;    /* border-t-2 */
+  border-top-style: solid;  /* (In Tailwind impliziert) */
+  
+  padding-top: 0.25rem;     /* py-1 (1 * 0.25rem = 4px) */
+  padding-bottom: 0.5rem;   /* pb-2 (2 * 0.25rem = 8px) */
+}
+
+
+
 .text-geld {
   font-family: 'Cormorant Garamond', serif;
   color: rgb(117, 81, 55);
@@ -104,7 +192,7 @@ nav {
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: bold;
-  font-size: clamp(2rem, 1.28rem + 3.08vw, 3.5rem)!important;
+  font-size: clamp(2rem, 1.28rem + 3.08vw, 3.5rem) !important;
   line-height: 1;
   font-weight: 800;
   color: white;
@@ -116,7 +204,7 @@ h2 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: bolder;
   color: white;
-  font-size: clamp(1.625rem, 1.29rem + 1.44vw, 2.5rem)!important;
+  font-size: clamp(1.625rem, 1.29rem + 1.44vw, 2.5rem) !important;
   line-height: 1.1;
   margin-bottom: 0.75rem;
 }
@@ -124,10 +212,11 @@ h2 {
 h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: bolder;
-  font-size: clamp(1.25rem, 1.08rem + 0.72vw, 1.75rem)!important;
+  font-size: clamp(1.25rem, 1.08rem + 0.72vw, 1.75rem) !important;
   line-height: 1.2;
   color: white;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+  margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
@@ -135,7 +224,7 @@ p {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-size: clamp(1rem, 0.94rem + 0.26vw, 1.1875rem);
   line-height: 1.5;
 }
@@ -149,28 +238,32 @@ span {
   line-height: 1.5;
 }
 
+#erste-section {
+  padding: 10rem 0;
+  /* Oben/Unten 7rem, Links/Rechts 0 */
+}
+
 .bereich {
   /* max-w-4xl (896px ist der Standardwert für 4xl) */
   max-width: 896px;
 
-  /* mx-auto (Zentriert den Container) */
-  margin-left: auto;
+  /* mx-auto (Zentriert den Container) 
   margin-right: auto;
+  margin-left: auto;*/
 
-  /* px-4 (Horizontales Padding: 1rem / 16px) */
+  /* px-4 (Horizontales Padding: 1rem / 16px) 
   padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 1rem;*/
+  padding: 0 1rem;
 
-  /* py-4 (Vertikales Padding: 1rem / 16px) */
+  /* py-4 (Vertikales Padding: 1rem / 16px) 
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1rem;*/
 
-  /* p-6 (Innenabstand von 1.5rem / 24px) */
-  padding: 1.5rem;
-  margin-top: 1rem;
+  margin: 2rem auto;
 
   /* shadow-2xl (Ein sehr weicher, tiefer Schatten) */
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
 
   /* rounded-2xl (Stark abgerundete Ecken: 1rem / 16px) */
   border-radius: 1rem;
@@ -179,13 +272,16 @@ span {
 /* sm:px-6 (Ab 640px Bildschirmbreite wird das seitliche Padding erhöht) */
 @media (max-width: 766px) {
   .bereich {
-    padding-left: 1.5rem;   /* 24px */
-    padding-right: 1.5rem;  /* 24px */
+    padding-left: 1.5rem;
+    /* 24px */
+    padding-right: 1.5rem;
+    /* 24px */
     /*padding: 2rem;  32px statt 24px */
     max-width: calc(766px * 0.4) !important;
     /* sm:rounded-3xl (Falls die Ecken auf großen Screens runder sein sollen) */
-    border-radius: 1.5rem; /* 24px */
-    
+    border-radius: 1.5rem;
+    /* 24px */
+
     /* sm:shadow-2xl bleibt oft gleich, kann aber intensiver werden */
     box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
   }
@@ -193,13 +289,13 @@ span {
 
 /* TODO: OVerlay bereich verändert sich und verzerrt das bild weil die schrift sich ncith anpasst. 
 1. ein max relative height ermitteln: mit clamop gelöst ist overlay beahndlungen, aber bild soll nicht ein fr sein, kleiner
-2. Schrift größe relative vergrößern*/ 
+2. Schrift größe relative vergrößern*/
 .cards-container {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: 
-  "card card card";
+  grid-template-areas:
+    "card card card";
   justify-content: center;
   place-items: center;
   max-width: 1500px;
@@ -210,14 +306,14 @@ span {
 @media (max-width: 766px) {
   .cards-container {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-  "card";
-   max-width: calc(766px * 0.4) !important;
+    grid-template-areas:
+      "card";
+    max-width: calc(766px * 0.4) !important;
     /* Damit es auf dem Handy nicht zu breit wird, begrenzen wir es zusätzlich 
     width: min(90%, 600px); */
-    
-   gap: 2px;
-   margin: 0 auto;
+
+    gap: 2px;
+    margin: 0 auto;
   }
 }
 
@@ -271,7 +367,7 @@ span {
   color: white;
   padding: 1.5rem;
   margin: 0 auto;
-  
+
   /* Padding wird nicht zur Breite addiert */
 }
 
@@ -288,4 +384,3 @@ span {
   padding: 10px 0;
   border-bottom: 1px solid #eee;
 }
-

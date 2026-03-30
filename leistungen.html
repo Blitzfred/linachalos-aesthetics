@@ -28,62 +28,55 @@
             </div>
 
             <!-- Desktop Navigation TODO übersetzten steht in chatgpt drinn Tailwind zu Css übersetzen -->
-            <ul class="hidden absolute left-1/2 -translate-x-1/2 md:flex gap-10 text-white font-body">
-                <li><a href="leistungen.html"
-                        class="font-luxery schrift-navigation schrift-navigation:hover">Leistungen</a>
+            <ul class="nav-menu">
+                <li><a href="leistungen.html" class="font-luxery schrift-navigation">Leistungen</a>
                 </li>
-                <li><a href="#about" class="font-luxery schrift-navigation schrift-navigation:hover">Über
+                <li><a href="#about" class="font-luxery schrift-navigation">Über
                         uns</a></li>
-                <li><a href="#about" class="font-luxery schrift-navigation schrift-navigation:hover">Test</a>
+                <li><a href="#about" class="font-luxery schrift-navigation">Test</a>
                 </li>
-                <li><a href="#about" class="font-luxery schrift-navigation schrift-navigation:hover">Impressum</a>
+                <li><a href="#about" class="font-luxery schrift-navigation">Impressum</a>
                 </li>
             </ul>
 
-            <!-- Burger Symbol 
-            <button id="menu-btn" class="md:hidden text-white text-2xl ml-auto">
-                ☰
-            </button> -->
-
             <!-- Instagram + Burger -->
-            <div class="ml-auto flex items-center gap-6">
+            <div class="side-menu">
 
                 <!-- Instagram -->
-                <a href="https://www.instagram.com/lc_aesthetik/" target="_blank"
-                    class="instagram-logo instagram-logo:hover">
+                <a href="https://www.instagram.com/lc_aesthetik/" target="_blank" class="instagram-logo">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
 
-                <a href="https://wa.me/+491637782037" target="_blank" class="whatsapp-logo whatsapp-logo:hover">
+                <a href="https://wa.me/+491637782037" target="_blank" class="whatsapp-logo">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
-
-                <!-- Burger -->
                 <button id="menu-btn"
-                    class="md:hidden text-white transition duration-300 font-luxery schrift-navigation">
+                    class="menu-btn-style font-luxery schrift-navigation">
                     ☰
                 </button>
-
             </div>
         </div>
 
         <!-- Mobile Menu -->
         <ul id="mobile-menu"
-            class="hidden absolute right-0 z-10 top-full w-64 shadow-lg duration-1000 text-white text-center space-y-1">
+            class="mobile-menu-style">
+
             <li class="border-white border-t-2 py-1 font-luxery schrift-navigation schrift-navigation:hover">
                 <a href="leistungen.html">Leistungen</a>
             </li>
-            <li class="border-white border-t-2 py-1 font-luxery schrift-navigation schrift-navigation:hover">
+            <li
+                class="border-white border-t-2 py-1 font-luxery schrift-navigation schrift-navigation:hover">
                 <a href="#about">Über uns</a>
             </li>
-            <li class="border-white border-t-2 py-1 pb-2 font-luxery schrift-navigation schrift-navigation:hover">
+            <li
+                class="border-white border-t-2 py-1 pb-2 font-luxery schrift-navigation schrift-navigation:hover">
                 <a href="#about">Impressum</a>
             </li>
         </ul>
     </nav>
 
     <!-- Preise -->
-    <section class="py-28 hintergrund-beige">
+    <section id="erste-section" class="hintergrund-beige">
 
         <h1>
             Preisliste
@@ -91,28 +84,30 @@
 
         <div class="bereich">
 
-            <p class="behandlungen">Hyaluron-Behandlungen</p>
-            <p class="mb-4 text-white">Ich arbeite ausschließlich mit hochwertiger Hyaluronsäure der Firma Teoxane.
+            <h3>Hyaluron-Behandlungen</h3>
+            <p>Ich arbeite ausschließlich mit hochwertiger Hyaluronsäure der Firma Teoxane.
                 Teoxane
                 zählt zu den führenden Herstellern auf dem ästhetischen Markt und steht für besonders natürliche,
-                harmonische und langanhaltende Ergebnisse. </p>
-            <p class="mb-4">Ziel meiner Behandlungen ist es, Ihre natürliche Schönheit zu unterstreichen – ohne
-                künstlichen Effekt. </p> <!-- Lippen -->
-            <!-- Lippen -->
-            <p class="behandlungen">Lippenbehandlung</p>
+                harmonische und langanhaltende Ergebnisse.<br>
+                Ziel meiner Behandlungen ist es, Ihre natürliche Schönheit zu unterstreichen – ohne
+                künstlichen Effekt. </p>
+
+            <h3>Lippenbehandlung</h3>
             <div class="price-list-lippenbehandlung">
                 <div class="price-row"> <span>0,5 ml</span> <span>189 €</span> </div>
                 <div class="price-row"> <span>0,8 ml</span> <span>250 €</span> </div>
                 <div class="price-row"> <span>1,0 ml</span> <span>330 €</span> </div>
             </div> <!-- Augenringe -->
-            <p class="behandlungen">Augenringe</p>
+
+            <h3>Augenringe</h3>
             <p> ab 339 € <br>
-                <span class="small-text"> (Der genaue Preis richtet sich nach dem individuellen Befund
-                    und dem benötigten Material.) </span>
-            </p> <!-- Beratung -->
-            <p class="behandlungen">Beratung</p>
-            <p> Vor jeder Behandlung biete ich ein unverbindliches Beratungsgespräch an. </p>
-            <p> Gemeinsam besprechen wir Ihre Wünsche, Erwartungen und finden die beste individuelle Lösung für ein
+                (Der genaue Preis richtet sich nach dem individuellen Befund
+                und dem benötigten Material.)
+            </p>
+
+            <h3>Beratung</h3>
+            <p> Vor jeder Behandlung biete ich ein unverbindliches Beratungsgespräch an.<br>
+                Gemeinsam besprechen wir Ihre Wünsche, Erwartungen und finden die beste individuelle Lösung für ein
                 ästhetisches und natürliches Ergebnis. </p>
 
         </div>

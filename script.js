@@ -30,7 +30,7 @@ function initNavbar() {
       mobileMenu.classList.add(
         "bg-amber-950/80"
       );
-      
+
 
     } else {
       navbar.classList.remove(
@@ -44,7 +44,7 @@ function initNavbar() {
 }
 
 function showBurgerMenu() {
-  const menuBtn = document.getElementById("menu-btn");
+  /*const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
   menuBtn.addEventListener("click", () => {
@@ -56,5 +56,19 @@ function showBurgerMenu() {
     if (window.innerWidth >= 768) { // md-Breakpoint
       mobileMenu.classList.add("hidden");
     }
+  });*/
+
+  const menu = document.querySelector('#mobile-menu');
+  const toggleBtn = document.querySelector('#menu-btn');
+
+  toggleBtn.addEventListener('click', () => {
+    // .classList.toggle fügt "is-open" hinzu oder entfernt es
+  menu.classList.toggle('is-open');
   });
+
+  window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768) {
+    menu.classList.remove('is-open');
+  }
+});
 }
