@@ -18,66 +18,59 @@
 
     <!-- NAVBAR -->
     <nav>
-        <div class="relative flex items-center px-8 py-6">
+        <div class="nav-container">
 
             <!-- Logo / Name -->
-            <div class="logo text-white font-luxury text-xl">
-                <img src="images/logo-transparent2.png" alt="logo-linachalos-aesthetics">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-transparent2.png" alt="logo-linachalos-aesthetics">
+                </a>
             </div>
 
-            <!-- Desktop Navigation -->
-            <ul class="hidden absolute left-1/2 -translate-x-1/2 md:flex gap-10 text-white">
-                <li><a href="leistungen.html"
-                        class="font-luxery schrift-navigation">Leistungen</a>
+            <!-- Desktop Navigation TODO übersetzten steht in chatgpt drinn Tailwind zu Css übersetzen -->
+            <ul class="nav-menu">
+                <li><a href="leistungen.html" class="font-luxery schrift-navigation">Leistungen</a>
                 </li>
-                <li><a href="#about"
-                        class="font-luxery schrift-navigation">Über
+                <li><a href="#about" class="font-luxery schrift-navigation">Über
                         uns</a></li>
-                <li><a href="#about"
-                        class="font-luxery schrift-navigation">Test</a>
+                <li><a href="#about" class="font-luxery schrift-navigation">Test</a>
                 </li>
-                <li><a href="#about"
-                        class="font-luxery schrift-navigation">Impressum</a>
+                <li><a href="#about" class="font-luxery schrift-navigation">Impressum</a>
                 </li>
             </ul>
 
             <!-- Instagram + Burger -->
-            <div class="ml-auto flex items-center gap-6">
+            <div class="side-menu">
 
                 <!-- Instagram -->
-                <a href="https://www.instagram.com/lc_aesthetik/" target="_blank"
-                    class="instagram-logo instagram-logo:hover">
+                <a href="https://www.instagram.com/lc_aesthetik/" target="_blank" class="instagram-logo">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
 
-                <a href="https://wa.me/+491637782037" target="_blank"
-                    class="whatsapp-logo whatsapp-logo:hover">
+                <a href="https://wa.me/+491637782037" target="_blank" class="whatsapp-logo">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
-
-                <!-- Burger -->
                 <button id="menu-btn"
-                    class="md:hidden text-white transition duration-300 font-luxery schrift-navigation schrift-navigation:hover">
+                    class="menu-btn-style font-luxery schrift-navigation">
                     ☰
                 </button>
-
             </div>
         </div>
 
         <!-- Mobile Menu -->
         <ul id="mobile-menu"
-            class="hidden absolute right-0 z-10 top-full w-64 shadow-lg duration-1000 text-white text-center space-y-1">
-            <li
-                class="border-white border-t-2 py-1 font-luxery schrift-navigation schrift-navigation:hover">
-                <a href="leistungen.html">Leistungen</a>
+            class="mobile-menu-style">
+
+            <li class="mobile-menu-liste mobile-menu-liste-style">
+                <a href="leistungen.html" class="font-luxery schrift-navigation">Leistungen</a>
             </li>
             <li
-                class="border-white border-t-2 py-1 font-luxery schrift-navigation schrift-navigation:hover">
-                <a href="#about">Über uns</a>
+                class="mobile-menu-liste mobile-menu-liste-style">
+                <a href="#about" class="font-luxery schrift-navigation">Über uns</a>
             </li>
             <li
-                class="border-white border-t-2 py-1 pb-2 font-luxery schrift-navigation schrift-navigation:hover">
-                <a href="#about">Impressum</a>
+                class="letzer-mobile-menu mobile-menu-letzte-liste-style">
+                <a href="#about" class="font-luxery schrift-navigation">Impressum</a>
             </li>
         </ul>
     </nav>
