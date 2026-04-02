@@ -13,6 +13,7 @@ body {
 }
 
 .schrift-navigation {
+  display: block;
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.5rem, 1.3rem + 0.6vw, 2.3rem);
   transition: all 0.5s ease;
@@ -26,6 +27,14 @@ body {
     0 0 5px rgba(117, 81, 55, 0.6),
     0 0 10px rgba(117, 81, 55, 0.8),
     0 0 20px rgba(117, 81, 55, 1);
+}
+
+.nav-container {
+  position: relative;         /* relative */
+  display: flex;              /* flex */
+  align-items: center;        /* items-center */
+  padding-inline: 2rem;        /* px-8 (32px) rechts */
+  padding-block: 1.5rem;        /* py-6 (24px) oben */
 }
 
 .nav-menu {
@@ -105,16 +114,34 @@ body {
   transform: translateY(0);
 }
 
-.letzer-mobile-menu {
-  border-color: white;      /* border-white */
-  border-top-width: 2px;    /* border-t-2 */
-  border-top-style: solid;  /* (In Tailwind impliziert) */
-  
-  padding-top: 0.25rem;     /* py-1 (1 * 0.25rem = 4px) */
-  padding-bottom: 0.5rem;   /* pb-2 (2 * 0.25rem = 8px) */
+.mobile-menu-liste {
+  padding-top: 0.25rem;        /* py-1 (oben) */
+  padding-bottom: 0.25rem;     /* py-1 (unten) */
+  /*list-style: none;             Optional: Entfernt den Standard-Punkt */
+}
+
+.mobile-menu-liste-style {
+  border-top: 2px solid white; /* border-t-2 & border-white */
 }
 
 
+.letzer-mobile-menu {
+  /*border-color: white;       border-white */
+  /*border-top-width: 2px;     border-t-2 */
+  /*order-top-style: solid;   (In Tailwind impliziert) */
+  
+  /*padding-top: 0.25rem;      py-1 (1 * 0.25rem = 4px) */
+  /*padding-bottom: 0.5rem;    pb-2 (2 * 0.25rem = 8px) */
+
+  padding-top: 0.25rem;        /* pt-1 (Teil von py-1) -> 4px */
+  padding-bottom: 0.5rem;      /* pb-2 (überschreibt pb-1) -> 8px */
+
+}
+
+.mobile-menu-letzte-liste-style {
+  border-top: 2px solid white; /* border-t-2 & border-white */
+  border-bottom: 2px solid white;
+}
 
 .text-geld {
   font-family: 'Cormorant Garamond', serif;
