@@ -89,13 +89,25 @@ body {
   color: white;
   text-align: center;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  background-color: #451a03cc; /* Beispiel-Hintergrund, damit man was sieht */
+  background-color: #646464cc; /* Beispiel-Hintergrund, damit man was sieht */
 
   /* --- DAS IST NEU FÜR DIE ANIMATION --- */
   opacity: 0;                /* Komplett durchsichtig */
   visibility: hidden;        /* Klicks gehen durch das Element hindurch */
   transform: translateY(-10px); /* Optional: Kleiner Slide-Effekt von oben */
   transition: all 800ms ease; /* Aktiviert die 1-Sekunden-Animation */
+
+
+  /* Blur effekt*/
+  z-index: 10;
+  /* z-10 */
+  backdrop-filter: blur(12px);
+  /* backdrop-blur-md */
+  -webkit-backdrop-filter: blur(12px);
+  /* für Safari */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  /* shadow-lg */
+  transition: all 0.5s ease;
 }
 
 /* Ab 768px Breite wird das Menü強制 (forcé) ausgeblendet */
