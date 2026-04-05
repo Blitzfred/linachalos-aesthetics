@@ -43,6 +43,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   color: white;
+  list-style: none; /* Entfernt die Aufzählungspunkte */
+  padding: 0;       /* Entfernt den Standard-Einzug links */
+  margin: 0;   /* Entfernt Standard-Abstände */
 }
 
 @media (min-width: 768px) {
@@ -51,6 +54,12 @@ body {
     gap: 2.5rem;
     /* 10 * 0.25rem = 40px */
   }
+}
+
+.link-menu {
+  text-decoration: none; /* Entfernt den Unterstrich */
+  color: inherit;        /* Übernimmt die Farbe vom Elternelement (statt Blau) */
+  cursor: pointer;       /* Behält das Finger-Symbol beim Drüberfahren */
 }
 
 .side-menu {
@@ -96,18 +105,6 @@ body {
   visibility: hidden;        /* Klicks gehen durch das Element hindurch */
   transform: translateY(-10px); /* Optional: Kleiner Slide-Effekt von oben */
   transition: all 800ms ease; /* Aktiviert die 1-Sekunden-Animation */
-
-
-  /* Blur effekt*/
-  z-index: 10;
-  /* z-10 */
-  backdrop-filter: blur(12px);
-  /* backdrop-blur-md */
-  -webkit-backdrop-filter: blur(12px);
-  /* für Safari */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
-  /* shadow-lg */
-  transition: all 0.5s ease;
 }
 
 /* Ab 768px Breite wird das Menü強制 (forcé) ausgeblendet */
@@ -293,13 +290,14 @@ span {
   /* px-4 (Horizontales Padding: 1rem / 16px) 
   padding-left: 1rem;
   padding-right: 1rem;*/
-  padding: 0 1rem;
+  padding: 1rem 1rem;
 
   /* py-4 (Vertikales Padding: 1rem / 16px) 
   padding-top: 1rem;
   padding-bottom: 1rem;*/
 
   margin: 2rem auto;
+  
 
   /* shadow-2xl (Ein sehr weicher, tiefer Schatten) */
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
@@ -324,6 +322,14 @@ span {
     /* sm:shadow-2xl bleibt oft gleich, kann aber intensiver werden */
     box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
   }
+}
+
+/* Damit das Bild nicht aus dem Container ausbircht*/
+.bereich img {
+  max-width: 100%; /*Du darfst so groß sein wie du willst, aber niemals breiter als dein Container (.bereich).*/
+  height: auto; /* Keine Verzerrung beiim vergrößeßern verkelinern*/
+  display: block; /* Verhindert einen kleinen Abstand unter dem Bild */
+  margin: 0 auto;   /* Zentriert das Bild horizontal */
 }
 
 /* TODO: OVerlay bereich verändert sich und verzerrt das bild weil die schrift sich ncith anpasst. 
