@@ -61,9 +61,18 @@ function showBurgerMenu() {
   const menu = document.querySelector('#mobile-menu');
   const toggleBtn = document.querySelector('#menu-btn');
 
-  toggleBtn.addEventListener('click', () => {
-    // .classList.toggle fügt "is-open" hinzu oder entfernt es
-  menu.classList.toggle('is-open');
+  // 1. Öffnen/Schließen per Button
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Verhindert, dass der Klick sofort wieder das "Window-Event" unten auslöst
+    menu.classList.toggle('is-open');
+  });
+
+  // 2. Schließen beim Klick auf die Seite (außerhalb)
+  window.addEventListener('click', (e) => {
+    // Wenn das Menü offen ist UND der Klick NICHT im Menü gelandet ist
+    if (menu.classList.contains('is-open') && !menu.contains(e.target)) {
+      menu.classList.remove('is-open');
+    }
   });
 
   window.addEventListener('resize', () => {

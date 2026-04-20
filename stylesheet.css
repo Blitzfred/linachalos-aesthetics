@@ -342,7 +342,11 @@ footer ul {
   padding-bottom: 1rem;*/
 
   margin: 2rem auto;
+  text-align: justify; /* Aktiviert den Blocksatz */
   
+  /* Wichtig für schöne Optik im Blocksatz: */
+  hyphens: auto;       /* Trennt lange Wörter automatisch mit Bindestrich */
+  word-break: break-word; 
 
   /* shadow-2xl (Ein sehr weicher, tiefer Schatten) */
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
