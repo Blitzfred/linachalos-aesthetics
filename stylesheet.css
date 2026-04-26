@@ -190,10 +190,17 @@ a {
 .instagram-logo {
   color: white;
   /* text-white */
-  font-size: 2rem;
   /* text-2xl entspricht 1.5rem */
   transition: all 0.5s ease;
   /* transition + duration-300 */
+}
+
+.nav-icon {
+  font-size: 2rem;
+}
+
+.footer-icon {
+  font-size: 20px;
 }
 
 .instagram-logo:hover {
@@ -210,7 +217,6 @@ a {
 .whatsapp-logo {
   color: white;
   /* text-white */
-  font-size: 2rem;
   /* text-2xl entspricht 1.5rem */
   transition: all 0.5s ease;
   /* transition + duration-300 */
