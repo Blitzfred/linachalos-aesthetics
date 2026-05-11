@@ -375,7 +375,7 @@ footer ul {
     padding-right: 1.5rem;
     /* 24px */
     /*padding: 2rem;  32px statt 24px */
-    max-width: calc(766px * 0.55) !important;
+    max-width: calc(766px * 0.52) !important;
     /* sm:rounded-3xl (Falls die Ecken auf großen Screens runder sein sollen) */
     border-radius: 1.5rem;
     /* 24px */
