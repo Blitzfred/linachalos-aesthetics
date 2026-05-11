@@ -432,49 +432,49 @@ footer ul {
   place-items: end;
 }
 
-/* Bild */
+/* 1. Der Link muss das Raster festlegen */
+.card a {
+  display: grid;
+  grid-template-areas: "stack"; /* Definiert eine feste Fläche */
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  text-decoration: none;
+  overflow: hidden; /* Verhindert, dass das Overlay ausbricht */
+}
+
+/* 2. Das Bild ist die Basis und spannt den Bereich auf */
 .card img {
+  grid-area: stack;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  grid-area: 1 / 1;
+  height: auto;
+  display: block;
+  z-index: 1; /* Bild liegt unten */
 }
 
-/* 🔥 Hover Effekt 
-.card:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 30px rgba(117, 81, 55, 0.2);
-}*/
-
-.behandlungen {
-  font-weight: bold;
-  color: white;
-  font-family: 'Cormorant Garamond', serif;
-  margin-top: 24px;
-  margin-bottom: 8px;
-}
-
-/* Overlay-Text bündig über dem Bild */
+/* 3. Das Overlay klebt am Bild */
 .overlaytext-behandlung {
-  grid-area: 1 / 1;
-  width: 100%;
-  /*height: 100%;*/
-  /* Füllt die ganze Karte aus
-  display: flex;
-  /* Text besser ausrichten 
-  flex-direction: column;*/
-  justify-content: center;
-  /* Text vertikal zentrieren */
-  background-color: rgb(114, 91, 79);
-  font-family: 'Cormorant Garamond', serif;
-  line-height: 1.1;
-  font-size: clamp(1.4rem, 1rem + 0.6vw, 3rem) !important;
-  line-height: 1.5;
-  color: white;
-  padding: 1.5rem;
-  margin: 0 auto;
+  grid-area: stack;
+  z-index: 2;
+  align-self: start;
 
-  /* Padding wird nicht zur Breite addiert */
+  /* 1. Positionierung relativ zur Bildhöhe */
+  margin-top: 70%; 
+
+  /* 2. Relative Höhe durch Padding in % oder vw */
+  /* Das sorgt dafür, dass der Streifen bei kleinen Bildern schmaler wird */
+  padding: 5% 1rem; 
+
+  /* 3. Schriftgröße hast du bereits mit clamp() perfekt gelöst */
+  font-size: clamp(1.4rem, 1rem + 0.8vw, 2.5rem) !important;
+
+  width: 100%;
+  height: auto;
+  background-color: rgba(114, 91, 79, 0.85);
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+  box-sizing: border-box; /* Wichtig, damit Padding nicht addiert wird */
 }
 
 .price-list-lippenbehandlung {
