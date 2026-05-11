@@ -17,7 +17,13 @@ body {
 }
 
 .footer-hintergrund {
+  background-color: rgb(114, 91, 79);
+  /**
   background-color: rgb(123, 51, 6);
+  background-color: rgb(160, 145, 135); Mitelbeige/Taupe
+  background-color: rgb(100, 90, 85); Dunkelbraun/Grau
+  background-color: rgb(114, 91, 79); dunkel beige
+  */
 }
 
 .font-luxury {
@@ -408,7 +414,7 @@ footer ul {
     grid-template-columns: 1fr;
     grid-template-areas:
       "card";
-    max-width: calc(766px * 0.4) !important;
+    max-width: calc(766px * 0.6) !important;
     /* Damit es auf dem Handy nicht zu breit wird, begrenzen wir es zusätzlich 
     width: min(90%, 600px); */
 
@@ -459,10 +465,10 @@ footer ul {
   flex-direction: column;*/
   justify-content: center;
   /* Text vertikal zentrieren */
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgb(114, 91, 79);
   font-family: 'Cormorant Garamond', serif;
   line-height: 1.1;
-  font-size: clamp(1rem, 0.94rem + 0.26vw, 1.5rem) !important;
+  font-size: clamp(1.4rem, 1rem + 0.6vw, 3rem) !important;
   line-height: 1.5;
   color: white;
   padding: 1.5rem;
